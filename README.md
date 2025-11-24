@@ -60,27 +60,7 @@ Evaluation:
 - Pathway enrichment on top-ranked genes (immune/inflammation focus)
 
 ---
+Author: Graciela Alfaro 2025
 
-## Repo Structure
-```text
-asd-blood-rnaseq-ml/
-├─ data/
-│  ├─ raw/                 # empty; downloaded via scripts
-│  ├─ processed/           # example matrices only (optional)
-├─ notebooks/
-│  ├─ 01_download_qc.ipynb
-│  ├─ 02_preprocess_normalize.ipynb
-│  ├─ 03_feature_selection.ipynb
-│  ├─ 04_model_training.ipynb
-│  ├─ 05_interpretation_pathways.ipynb
-├─ src/
-│  ├─ download.py
-│  ├─ preprocess.py
-│  ├─ features.py
-│  ├─ train.py
-│  ├─ explain.py
-├─ results/
-│  ├─ figures/
-│  ├─ tables/
-├─ requirements.txt
-└─ README.md
+
+
