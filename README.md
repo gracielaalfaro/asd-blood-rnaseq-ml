@@ -66,6 +66,33 @@ This data contains no biological information and is safe for public use.
 
 To reproduce the study with real transcriptomic data, please follow the provided download instructions for the public GEO dataset referenced in the original paper.
 
+## 🔬 Results (Example Synthetic Data)
+
+This repository includes a synthetic mock dataset to demonstrate the full end-to-end pipeline structure.  
+These results are *not biological* and simply confirm that the ML workflow, preprocessing pipeline, and evaluation functions operate correctly.
+
+### 📊 Model Performance (5-fold Stratified CV)
+
+| Model         | ROC-AUC | Accuracy | F1 Score |
+|---------------|---------|----------|----------|
+| XGBoost       | 0.60    | —        | —        |
+| RandomForest  | 0.40    | —        | —        |
+| SVM (RBF)     | 0.23    | —        | —        |
+
+These scores are expected on synthetic mock data, where no biological signal exists.  
+They demonstrate that the pipeline:
+
+- loads processed RNA-seq matrices  
+- applies feature selection & scaling  
+- trains RF, SVM, and XGBoost classifiers  
+- evaluates via leak-proof cross-validation  
+- saves reproducible outputs to `results/tables/`
+
+### 📁 Output Files
+
+- `results/tables/model_comparison.csv`  
+- `results/tables/top_genes_example.csv` (feature importance)
+
 
 ---
 Author: Graciela Alfaro 2025
