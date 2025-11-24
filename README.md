@@ -58,6 +58,14 @@ Evaluation:
 - Feature importance
 - SHAP values (tree models)
 - Pathway enrichment on top-ranked genes (immune/inflammation focus)
+- 
+- ### Example Data
+The repository includes a small synthetic dataset (`example_features.csv`, `example_labels.csv`)
+generated to match the dimensions and structure of the real RNA-seq project. 
+This data contains no biological information and is safe for public use.
+
+To reproduce the study with real transcriptomic data, please follow the provided download instructions for the public GEO dataset referenced in the original paper.
+
 
 ---
 Author: Graciela Alfaro 2025
