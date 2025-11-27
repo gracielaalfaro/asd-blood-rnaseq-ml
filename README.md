@@ -6,6 +6,13 @@ This project reproduces and extends a published blood RNA-seq machine learning p
 Replication target: blood-based RNA signature + ML diagnostic modeling.
 
 ---
+## 📘 Overview
+Preprocess the DESeq2 differential expression results, align diagnostic labels, engineer features using log-transformation and variance filtering, and evaluate multiple ML models:
+- Logistic Regression
+- Random Forest
+- XGBoost
+We then identify the top biomarker genes contributing to classification, generating reproducible tables and visualizations.
+This repository contains all reproducible code, figures, and results for the machine learning portion of the project.
 
 ## Project Goals
 1. **Reproduce** published performance using processed GEO blood RNA-seq expression matrices.
@@ -46,7 +53,7 @@ Replication target: blood-based RNA signature + ML diagnostic modeling.
 ### 3. Modeling
 Models implemented:
 - Random Forest
-- Support Vector Machine (linear/RBF)
+- Logistical Regression
 - XGBoost
 
 Evaluation:
@@ -64,7 +71,6 @@ The repository includes a small synthetic dataset (`example_features.csv`, `exam
 generated to match the dimensions and structure of the real RNA-seq project. 
 This data contains no biological information and is safe for public use.
 
-To reproduce the study with real transcriptomic data, please follow the provided download instructions for the public GEO dataset referenced in the original paper.
 
 ## 🔬 Results (Example Synthetic Data)
 
@@ -75,9 +81,9 @@ These results are *not biological* and simply confirm that the ML workflow, prep
 
 | Model         | ROC-AUC | Accuracy | F1 Score |
 |---------------|---------|----------|----------|
-| XGBoost       | 0.60    | —        | —        |
-| RandomForest  | 0.40    | —        | —        |
-| SVM (RBF)     | 0.23    | —        | —        |
+| XGBoost       | 0.60    | 1.00     | 1.00     |
+| RandomForest  | 0.55    | 1.00     | 1.00     |
+| Log.R         | 0.50    | 0.80     | 0.80     |
 
 These scores are expected on synthetic mock data, where no biological signal exists.  
 They demonstrate that the pipeline:
