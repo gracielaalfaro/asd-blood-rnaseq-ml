@@ -1,0 +1,4 @@
+model,cv_mean_roc_auc,cv_std_roc_auc,test_accuracy,test_f1,test_roc_auc
+LogisticRegression,0.5,0.4472135954999579,0.8,0.8,1.0
+RandomForest,0.55,0.45825756949558394,1.0,1.0,1.0
+XGBoost,0.6,0.37416573867739417,1.0,1.0,1.0
